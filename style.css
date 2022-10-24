@@ -1,0 +1,60 @@
+body {
+    background: linear-gradient(65deg, hsl(60, 80%, 60%), hsl(30, 80%, 60%));
+}
+div {
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+}
+span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px grey; 
+    animation: run 2s infinite ease-in-out;
+    -webkit-animation: run 2s infinite reverse ease-in-out;
+}
+.top {
+    background: brown;
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+}
+.left {
+    background: blueviolet;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+.bottom {
+    background: greenyellow;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+.right {
+    background: midnightblue;
+}
+
+@keyframes run {
+0% {
+transform: translate(0%);
+border-radius: 50%;
+}
+25% {
+    transform: translate(150%) scale(0.5);
+    border-radius: 0;
+}
+50% {
+    transform: translate(150%, 150%);
+    border-radius: 50%;
+}
+75% {
+    transform: translate(0, 150%) scale(0.5);
+    border-radius: 0;
+}
+}
